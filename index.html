@@ -2,110 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>This is My First Sample Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epic: The Musical - Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Crimson Text', serif;
+      background-color: #1b1a17;
+      color: #f5f0e1;
+      background-image: url('https://www.transparenttextures.com/patterns/ancient-wall.png');
     }
 
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
+      background: #2e2b25;
+      padding: 60px 20px 30px;
       text-align: center;
+      border-bottom: 2px solid #a88f64;
     }
 
     header h1 {
-      font-size: 2em;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #e0c28c;
+      text-shadow: 2px 2px #000;
     }
 
-    nav {
-      background: #444;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+    header p {
+      font-size: 1.2em;
+      color: #c2b28f;
     }
 
-    nav a {
-      color: #fff;
+    .main-nav {
+      margin-top: 20px;
+    }
+
+    .main-nav a {
+      display: inline-block;
       margin: 0 15px;
-      text-decoration: none;
+      padding: 8px 12px;
       font-weight: bold;
+      color: #e0c28c;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      transition: background 0.3s, border 0.3s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .main-nav a:hover {
+      background-color: #3b362e;
+      border-color: #a88f64;
     }
 
-    .container {
-      max-width: 900px;
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      border-bottom: 2px solid #a88f64;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #d9c9a3;
+    }
+
+    .card {
       padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
     footer {
+      background-color: #2e2b25;
       text-align: center;
-      padding: 15px;
-      background: #333;
-      color: #fff;
-      margin-top: 30px;
+      padding: 20px;
+      color: #a89f87;
+      border-top: 2px solid #a88f64;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 5px 0;
-      }
+    a {
+      color: #dec992;
+      text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .album-cover {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 2px solid #a88f64;
+    }
+
+    .saga-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 15px auto;
+      border-radius: 10px;
+      filter: contrast(110%) brightness(95%) saturate(120%);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .saga-image.troy      { border: 2px solid #602426; box-shadow: 0 0 15px #602426; }
+    .saga-image.troy:hover { transform: scale(1.03); box-shadow: 0 0 25px #602426; }
+
+    .saga-image.cyclops      { border: 2px solid #3c2322; box-shadow: 0 0 15px #3c2322; }
+    .saga-image.cyclops:hover { transform: scale(1.03); box-shadow: 0 0 25px #3c2322; }
+
+    .saga-image.ocean      { border: 2px solid #07283c; box-shadow: 0 0 15px #07283c; }
+    .saga-image.ocean:hover { transform: scale(1.03); box-shadow: 0 0 25px #07283c; }
+
+    .saga-image.circe      { border: 2px solid #bd5158; box-shadow: 0 0 15px #bd5158; }
+    .saga-image.circe:hover { transform: scale(1.03); box-shadow: 0 0 25px #bd5158; }
+
+    .saga-image.underworld      { border: 2px solid #273333; box-shadow: 0 0 15px #273333; }
+    .saga-image.underworld:hover { transform: scale(1.03); box-shadow: 0 0 25px #273333; }
+
+    .saga-image.thunder      { border: 2px solid #502310; box-shadow: 0 0 15px #502310; }
+    .saga-image.thunder:hover { transform: scale(1.03); box-shadow: 0 0 25px #502310; }
+
+    .saga-image.wisdom      { border: 2px solid #0e0824; box-shadow: 0 0 15px #0e0824; }
+    .saga-image.wisdom:hover { transform: scale(1.03); box-shadow: 0 0 25px #0e0824; }
+
+    .saga-image.vengeance      { border: 2px solid #080e12; box-shadow: 0 0 15px #080e12; }
+    .saga-image.vengeance:hover { transform: scale(1.03); box-shadow: 0 0 25px #080e12; }
+
+    .saga-image.ithaca      { border: 2px solid #380d0f; box-shadow: 0 0 15px #380d0f; }
+    .saga-image.ithaca:hover { transform: scale(1.03); box-shadow: 0 0 25px #380d0f; }
+
+    /* Card background per saga */
+    .troy      { background-color: #111017; }
+    .cyclops   { background-color: #0a0202; }
+    .ocean     { background-color: #0a151f; }
+    .circe     { background-color: #1a0e14; }
+    .underworld{ background-color: #131516; }
+    .thunder   { background-color: #1d0e07; }
+    .wisdom    { background-color: #0e0824; }
+    .vengeance { background-color: #080e12; }
+    .ithaca    { background-color: #100505; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Welcome to My Webpage</h1>
+    <h1>Welcome to the World of EPIC</h1>
+    <p>Where ancient legends come alive through music.</p>
+    <div class="main-nav">
+      <a href="#">Home</a>
+      <a href="#characters">Characters</a>
+      <a href="#sagas">Sagas</a>
+      <a href="#songs">Songs</a>
+    </div>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <section class="section">
+    <img src="https://github.com/HanNer0/Sia-Final-Project/blob/main/Epic%20The%20Musical%20Album%20Cover.png?raw=true" 
+         alt="Epic Saga Album Cover" class="album-cover">
+    <div class="card">
+      <h2>Welcome, adventurer!</h2>
+      <p>Step into a world where ancient myths meet modern music, and legendary heroes rise again through rhythm and rhyme.</p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h2>Hello!</h2>
-    <p>This is a sample webpage built with HTML and CSS. You can use this as a template for your personal site, resume, or portfolio. Customize it however you like!</p>
+  <section class="section">
+    <h2>Quick Summary</h2>
+    <div class="card">
+      <p><strong>Epic: The Musical</strong> reimagines Homer’s <em>The Odyssey</em>, created by Jorge Rivera-Herrans. Through sagas like <strong>The Troy Saga</strong> and <strong>The Cyclops Saga</strong>, it blends hip-hop, pop, and musical theatre.</p>
+    </div>
+  </section>
 
-    <h3>Features:</h3>
-    <ul>
-      <li>Responsive design</li>
-      <li>Clean layout</li>
-      <li>Simple navigation bar</li>
-    </ul>
-  </div>
+  <section class="section" id="sagas">
+    <h2>Featured Saga</h2>
+
+    <div class="card troy">
+      <h3>The Troy Saga</h3>
+      <img src="..." alt="The Troy Saga" class="saga-image troy">
+      <p>Odysseus begins his journey after the war, bearing the burden of leadership.</p>
+    </div>
+
+    <div class="card cyclops">
+      <h3>The Cyclops Saga</h3>
+      <img src="..." alt="The Cyclops Saga" class="saga-image cyclops">
+      <p>A monstrous danger forces the crew to rely on wit and teamwork.</p>
+    </div>
+
+    <div class="card ocean">
+      <h3>The Ocean Saga</h3>
+      <img src="..." alt="The Ocean Saga" class="saga-image ocean">
+      <p>The sea tests the crew’s will as they journey into the unknown.</p>
+    </div>
+
+    <div class="card circe">
+      <h3>The Circe Saga</h3>
+      <img src="..." alt="The Circe Saga" class="saga-image circe">
+      <p>A mysterious figure offers power, but at what cost?</p>
+    </div>
+
+    <div class="card underworld">
+      <h3>The Underworld Saga</h3>
+      <img src="..." alt="The Underworld Saga" class="saga-image underworld">
+      <p>Odysseus seeks answers in the realm of the dead.</p>
+    </div>
+
+    <div class="card thunder">
+      <h3>The Thunder Saga</h3>
+      <img src="..." alt="The Thunder Saga" class="saga-image thunder">
+      <p>A paradise conceals a divine challenge.</p>
+    </div>
+
+    <div class="card wisdom">
+      <h3>The Wisdom Saga</h3>
+      <img src="..." alt="The Wisdom Saga" class="saga-image wisdom">
+      <p>Telemachus begins his own heroic search.</p>
+    </div>
+
+    <div class="card vengeance">
+      <h3>The Vengeance Saga</h3>
+      <img src="..." alt="The Vengeance Saga" class="saga-image vengeance">
+      <p>Odysseus battles forward, nearing home.</p>
+    </div>
+
+    <div class="card ithaca">
+      <h3>The Ithaca Saga</h3>
+      <img src="..." alt="The Ithaca Saga" class="saga-image ithaca">
+      <p>The king returns. Justice must be done.</p>
+    </div>
+  </section>
+
+  <section class="section" id="characters">
+    <h2>Meet the Characters</h2>
+    <div class="card">
+      <h3>Odysseus</h3>
+      <p>The clever warrior returning home. “I am no hero, but I’ll find a way.”</p>
+    </div>
+    <div class="card">
+      <h3>Elpinor</h3>
+      <p>A loyal crewmate whose tragic fate echoes through the journey.</p>
+    </div>
+  </section>
+
+  <section class="section" id="songs">
+    <h2>Explore the Lore</h2>
+    <div class="card">
+      <p>Visit legendary places like Troy, the Underworld, and the sea of monsters. Each saga captures a mythic setting through music.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Behind the Music</h2>
+    <div class="card">
+      <p>Created by Jorge Rivera-Herrans (Jay Hero), <strong>Epic</strong> began on TikTok and evolved into a musical saga.</p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Rhoanne Kyla Suerte Felipe Maclang. La Concolacion University of the Philippines. All rights reserved.
+    <p>&copy; 2025 Epic: The Musical Fanpage | <a href="#">Contact</a> | <a href="#">Privacy</a></p>
   </footer>
-
 </body>
 </html>
